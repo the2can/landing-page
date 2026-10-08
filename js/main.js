@@ -37,7 +37,7 @@
       empty: 'Nothing here yet. But did you know a toucan’s beak can be up to a third of its body length, and works as a radiator to shed heat?',
       stackEmpty: 'Empty for now. But did you know toucans toss food to each other with their beaks? Teamwork, basically.',
       stackTitle: 'What we build with',
-      contactTitle: 'Follow the flock.', contactSub: 'Everything we build lives in the org. Issues, PRs and bad ideas welcome.',
+      contactTitle: 'Follow the flock.', contactSub: 'Everything we build lives in the org. Issues, PRs and bad ideas, welcome.',
       orgCta: 'GitHub organization', footer: 'two cans → toucan · built by the flock',
     },
     es: {
