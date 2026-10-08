@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Toucan · Our shared workshop</title>
+  <meta name="description" content="A place to turn our ideas into working software, and take them from a rough sketch all the way to production.">
+  <meta name="theme-color" content="#1b1d27">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The 2CAN — Toucan">
+  <meta property="og:description" content="Our shared workshop: where ideas turn into working software.">
+
+  <link rel="icon" type="image/png" href="assets/img/logo-nav.png">
+
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://github.com">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#about" data-i18n="skip">Skip to content</a>
+
+  <div class="page">
+    <div class="leaves" id="leaves" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Main">
+      <div class="nav__bar">
+        <a class="brand" href="#top" aria-label="The 2CAN">
+          <img src="assets/img/logo-nav.png" alt="" width="34" height="34">
+          <span class="brand__name">THE <span>2CAN</span></span>
+        </a>
+        <div class="nav__links">
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#members" data-i18n="navMembers">Members</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <a href="#stack">Stack</a>
+        </div>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false" lang="es">ES</button>
+        </div>
+        <button type="button" class="nav__toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu">☰</button>
+      </div>
+      <div class="nav__menu" id="menu" hidden>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#members" data-i18n="navMembers">Members</a>
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="#stack">Stack</a>
+      </div>
+    </nav>
+
+    <main>
+      <div id="top"></div>
+
+      <header class="hero">
+        <div class="hero__copy">
+          <span class="eyebrow">// <span data-i18n="eyebrow">Toucan · our shared workshop</span></span>
+          <h1><span data-i18n="heroA1">From rough sketch</span> <span data-i18n="heroA2">to production.</span></h1>
+          <p class="hero__sub" data-i18n="heroSub">A place to turn our ideas into working software, and take them from a rough sketch all the way to production.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#projects"><span data-i18n="ctaProjects">See projects</span> →</a>
+            <a class="btn btn--ghost" href="#contact">GitHub</a>
+          </div>
+        </div>
+        <div class="hero__art">
+          <div class="hero__glow"></div>
+          <img src="assets/img/toucan.webp" alt="Toucanardo, the Toucan mascot" width="500" height="500" fetchpriority="high">
+        </div>
+      </header>
+
+      <div class="livery" aria-hidden="true"></div>
+
+      <section id="about" aria-labelledby="about-title">
+        <div class="about__intro">
+          <span class="section-label">01 — <span data-i18n="navAbout">About</span></span>
+          <h2 class="section-title" id="about-title" data-i18n="intro">We're a flock of friends who study systems and spend our free time building things nobody asked for (but we definitely use).</h2>
+        </div>
+        <div class="find">
+          <span class="find__title" data-i18n="findTitle">What you'll find here</span>
+          <ul class="find__list" id="find-list"></ul>
+        </div>
+      </section>
+
+      <section id="members" aria-labelledby="members-title">
+        <div class="members__inner">
+          <div class="heading-block">
+            <span class="section-label">02 — <span data-i18n="navMembers">Members</span></span>
+            <h2 class="section-title" id="members-title" data-i18n="flock">The flock</h2>
+          </div>
+          <div class="members__grid" id="members-grid"></div>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="projects__top">
+          <div class="heading-block">
+            <span class="section-label">03 — <span data-i18n="navProjects">Projects</span></span>
+            <h2 class="section-title" id="projects-title" data-i18n="projectsTitle">What we’ve built</h2>
+          </div>
+          <div class="segmented" id="type-filter" role="group" aria-label="Project type"></div>
+        </div>
+        <div class="chips" id="member-filter" role="group" aria-label="Member"></div>
+        <div class="projects__grid" id="projects-grid" aria-live="polite"></div>
+        <p class="empty" id="projects-empty" data-i18n="empty" hidden>Nothing here yet. But did you know a toucan’s beak can be up to a third of its body length, and works as a radiator to shed heat?</p>
+      </section>
+
+      <section id="stack" aria-labelledby="stack-title">
+        <div class="stack__inner">
+          <div class="heading-block">
+            <span class="section-label">04 — Stack</span>
+            <h2 class="section-title" id="stack-title" data-i18n="stackTitle">What we build with</h2>
+          </div>
+          <div class="stack__board">
+            <ul class="stack__grid" id="stack-grid"></ul>
+            <p class="stack__empty" id="stack-empty" data-i18n="stackEmpty">Empty for now. But did you know toucans toss food to each other with their beaks? Teamwork, basically.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="contact__inner">
+          <div class="contact__copy">
+            <h2 id="contact-title" data-i18n="contactTitle">Follow the flock.</h2>
+            <p data-i18n="contactSub">Everything we build lives in the org. Issues, PRs and bad ideas welcome.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="https://github.com/the2can" target="_blank" rel="noopener noreferrer"><span data-i18n="orgCta">GitHub organization</span> ↗</a>
+            </div>
+          </div>
+          <div class="contact__list" id="contact-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__brand">THE <span>2CAN</span></span>
+      <span class="footer__note" data-i18n="footer">two cans → toucan · built by the flock</span>
+    </footer>
+  </div>
+
+  <noscript>
+    <style>.reveal { opacity: 1; transform: none; }</style>
+  </noscript>
+</body>
+</html>
